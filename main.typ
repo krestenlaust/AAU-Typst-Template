@@ -15,7 +15,7 @@
   // Example: `abstract: [This is my abstract...]`
   abstract: lorem(59),
   date: "November 22, 2023",
-  logo: "AAUgraphics/frontpageImage.jpg",
+  logo: none,
 )
 
 // We generated the example code below so you can see how

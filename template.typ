@@ -12,6 +12,11 @@
   // Set the document's basic properties.
   set document(author: authors.map(a => a.name), title: title)
   set page(numbering: "1", number-align: center)
+  locate (
+    loc => if (1 == loc.page()) {
+      set page(background: image("AAUgraphics/aau_waves.svg", width: 100%, height: 100%))
+    }
+  )
 
   // Save heading and body font families in variables.
   let body-font = "New Computer Modern"
@@ -29,7 +34,7 @@
   if logo != none {
     align(right, image(logo, width: 100%))
   }
-  image("AAUgraphics/aau_wavesImage.svg", width: 100%, height: 20%)
+  //image("AAUgraphics/aau_waves.svg", width: 100%, height: 100%)
   v(9.6fr)
 
   text(1.1em, date)
