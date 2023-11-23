@@ -8,12 +8,22 @@
   groupname: "",
   department: "",
   date: none,
-  logo: none,
+  meta: (
+    title: "Edit Title Here",
+    theme: "Scientific Theme",
+    project_period: "Fall Semester 2010",
+    project_group: "group 1",
+    participants: (),
+    supervisor: (),
+    date: "Christmas Eve",
+  ),
   body,
 ) = {
   let aaublue = rgb(33, 26, 82)
+  let snake_to_pascalcase(str) = str.split("_").map(str => upper(str.slice(0, 1)) + lower(str.slice(1))).join(" ")
+
   // Set the document's basic properties.
-  set document(author: authors.map(a => a.name), title: title)
+  set document(author: meta.participants.map(a => a.name), title: meta.title)
   set page(numbering: "1", number-align: center)
 
   set page(background: locate(loc =>
@@ -44,9 +54,9 @@
       {
         set text(fill: white, 12pt)
         align(center)[
-          #text(font: sans-font, 2em, weight: 700, title)\ \
-          #groupname\
-          #((..authors.map(author => author.name)).join(", ", last: " and "))
+          #text(font: sans-font, 2em, weight: 700, meta.title)\ \
+          #meta.project_group\
+          #((..meta.participants.map(author => author.name)).join(", ", last: " and "))
         ]
       }
     )),
@@ -74,31 +84,20 @@
       ]
     }),
     box(width: 100%, height: 100%)[
-      *Title:*\
-      #title\ \
+      #(meta.pairs().map(data =>
+      [*#(snake_to_pascalcase(data.at(0))):*\ #(
+        if type(data.at(1)) == array {
+          data.at(1).map(d => [#(d.name)]).join("\n")
+        } else {
+          data.at(1)
+        }
+        )]
+      ).join("\n\n"))
 
-      *Theme:*\
-      Scientific Theme\ \
-
-      *Project Period:*\
-      Fall Semester 2010\ \
-
-      *Project Group:*\
-      #groupname\ \
-
-      *Participants(s):*\
-      Todo\ \
-
-      *Supervisor(s):*\
-      Supervisor 1\
-      Supervisor 2\ \
-
+      \
       *Copies:* 1\ \
 
       *Page Numbers:* Todo\ \
-
-      *Date of Completion:*\
-      #date\ \
     ],
     box(width: 100%, height: 100%, stroke: black, inset: 8pt)[
       *Abstract:*\
