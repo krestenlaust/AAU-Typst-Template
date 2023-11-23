@@ -62,17 +62,48 @@
   //v(1fr)
   grid(
     columns: (50%, 50%),
-    rows: (20%, 80%),
+    rows: (30%, 70%),
     box(width: 100%, height: 100%, {
       image("AAUgraphics/aau_logo_en.svg")
     }),
     box(width: 100%, height: 100%, {
       align(right + horizon)[
-        **#(department)**\
+        *#(department)*\
         Aalborg University\
         http://cs.aau.dk
       ]
-    })
+    }),
+    box(width: 100%, height: 100%)[
+      *Title:*\
+      #title\ \
+
+      *Theme:*\
+      Scientific Theme\ \
+
+      *Project Period:*\
+      Fall Semester 2010\ \
+
+      *Project Group:*\
+      #groupname\ \
+
+      *Participants(s):*\
+      Todo\ \
+
+      *Supervisor(s):*\
+      Supervisor 1\
+      Supervisor 2\ \
+
+      *Copies:* 1\ \
+
+      *Page Numbers:* Todo\ \
+
+      *Date of Completion:*\
+      #date\ \
+    ],
+    box(width: 100%, height: 100%, stroke: black, inset: 8pt)[
+      *Abstract:*\
+      #abstract
+    ]
   )
   align(center)[
     #heading(
