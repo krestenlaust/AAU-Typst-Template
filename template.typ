@@ -5,13 +5,21 @@
   title: "Edit Title Here",
   abstract: [],
   authors: (),
+  groupname: "",
   date: none,
   logo: none,
   body,
 ) = {
+  let aaublue = rgb(33, 26, 82)
   // Set the document's basic properties.
   set document(author: authors.map(a => a.name), title: title)
   set page(numbering: "1", number-align: center)
+
+  set page(background: locate(loc =>
+    if loc.page() == 1 {
+      image("AAUgraphics/aau_waves.svg", width: 100%, height: 100%)
+    }
+  ))
 
   // Save heading and body font families in variables.
   let body-font = "New Computer Modern"
@@ -24,33 +32,29 @@
   set heading(numbering: "1.1")
 
   // Title page.
-  // The page can contain a logo if you pass one with `logo: "logo.png"`.
-  v(0.6fr)
-  if logo != none {
-    align(right, image(logo, width: 100%))
-  }
-  image("AAUgraphics/aau_wavesImage.svg", width: 100%, height: 20%)
-  v(9.6fr)
-
-  text(1.1em, date)
-  v(1.2em, weak: true)
-  text(font: sans-font, 2em, weight: 700, title)
-
-  // Author information.
-  pad(
-    top: 0.7em,
-    right: 20%,
-    grid(
-      columns: (1fr,) * calc.min(3, authors.len()),
-      gutter: 1em,
-      ..authors.map(author => align(start)[
-        *#author.name* \
-        #author.email
-      ]),
-    ),
+  grid(
+    columns: (100%),
+    rows: (50%, 20%, 30%),
+    align(center + bottom, box(
+      fill: aaublue,
+      inset: 18pt,
+      radius: 1pt,
+      clip: false,
+      {
+        set text(fill: white, 12pt)
+        align(center)[
+          #text(font: sans-font, 2em, weight: 700, title)\ \
+          #groupname\
+          #((..authors.map(author => author.name)).join(", ", last: " and "))
+        ]
+      }
+    )),
+    box(),
+    align(center)[
+      #image("AAUgraphics/aau_logo_circle_en.svg", width: 25%)
+    ]
   )
 
-  v(2.4fr)
   pagebreak()
 
   // Abstract page.
