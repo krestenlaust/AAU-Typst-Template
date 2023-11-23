@@ -97,7 +97,7 @@
       \
       *Copies:* 1\ \
 
-      *Page Numbers:* Todo\ \
+      *Page Numbers:* #(locate(loc => counter(page).final(loc)))\ \
     ],
     box(width: 100%, height: 100%, stroke: black, inset: 8pt)[
       *Abstract:*\
