@@ -15,7 +15,10 @@
       (name: "Lasse Lassesen", email: "mail3@mail.dk"),
       (name: lorem(5), email: "mail4@mail.dk"),
     ),
-    supervisor: (),
+    supervisor: (
+      (name: "Anders And", email: "abc@abc.com"),
+      (name: "Mickey Mouse", email: "abc@abc.com"),
+    ),
     date: "Christmas Eve",
   ),
   // Insert your abstract after the colon, wrapped in brackets.
