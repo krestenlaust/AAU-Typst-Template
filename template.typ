@@ -6,6 +6,7 @@
   abstract: [],
   authors: (),
   groupname: "",
+  department: "",
   date: none,
   logo: none,
   body,
@@ -58,8 +59,22 @@
   pagebreak()
 
   // Abstract page.
-  v(1fr)
-align(center)[
+  //v(1fr)
+  grid(
+    columns: (50%, 50%),
+    rows: (20%, 80%),
+    box(width: 100%, height: 100%, {
+      image("AAUgraphics/aau_logo_en.svg")
+    }),
+    box(width: 100%, height: 100%, {
+      align(right + horizon)[
+        **#(department)**\
+        Aalborg University\
+        http://cs.aau.dk
+      ]
+    })
+  )
+  align(center)[
     #heading(
       outlined: false,
       numbering: none,

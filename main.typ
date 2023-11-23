@@ -15,6 +15,7 @@
   // Example: `abstract: [This is my abstract...]`
   abstract: lorem(59),
   groupname: "cs-23-sw-1-p1-15",
+  department: "Computer Science",
   date: "November 22, 2023",
   logo: none,
 )
