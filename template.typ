@@ -2,17 +2,13 @@
 // It takes your content and some metadata and formats it.
 // Go ahead and customize it to your liking!
 #let project(
-  title: "Edit Title Here",
   abstract: [],
-  authors: (),
-  groupname: "",
   department: "",
-  date: none,
   meta: (
-    title: "Edit Title Here",
-    theme: "Scientific Theme",
-    project_period: "Fall Semester 2010",
-    project_group: "group 1",
+    title: "Untitled",
+    theme: "",
+    project_period: "",
+    project_group: "No group name provided",
     participants: (),
     supervisor: (),
     date: "Christmas Eve",
@@ -60,7 +56,7 @@
         ]
       }
     )),
-    box(),
+    none,
     align(center)[
       #image("AAUgraphics/aau_logo_circle_en.svg", width: 25%)
     ]
@@ -69,7 +65,6 @@
   pagebreak()
 
   // Abstract page.
-  //v(1fr)
   grid(
     columns: (50%, 50%),
     rows: (30%, 70%),
@@ -104,16 +99,6 @@
       #abstract
     ]
   )
-  align(center)[
-    #heading(
-      outlined: false,
-      numbering: none,
-      text(0.85em, smallcaps[Abstract]),
-    )
-    #abstract
-  ]
-  v(1.618fr)
-  pagebreak()
 
   // Table of contents.
   outline(depth: 3, indent: true)
