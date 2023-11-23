@@ -5,7 +5,7 @@
   title: "Edit Title Here",
   abstract: [],
   authors: (),
-  group_name: "",
+  groupname: "",
   date: none,
   logo: none,
   body,
@@ -32,44 +32,29 @@
   set heading(numbering: "1.1")
 
   // Title page.
-  // The page can contain a logo if you pass one with `logo: "logo.png"`.
-  v(1.6fr)
-  box(
-    fill: aaublue,
-    inset: 18pt,
-    radius: 1pt,
-    clip: false,
-    [
-      #set text(fill: white, 12pt)
-      #align(center, text(font: sans-font, 2em, weight: 700, title))
-      #align(center, group_name)
-      #align(center)[
-        #((..authors.map(author => author.name)).join(", ", last: " and "))
-      ]
+  grid(
+    columns: (100%),
+    rows: (50%, 20%, 30%),
+    align(center + bottom, box(
+      fill: aaublue,
+      inset: 18pt,
+      radius: 1pt,
+      clip: false,
+      {
+        set text(fill: white, 12pt)
+        align(center)[
+          #text(font: sans-font, 2em, weight: 700, title)\ \
+          #groupname\
+          #((..authors.map(author => author.name)).join(", ", last: " and "))
+        ]
+      }
+    )),
+    box(),
+    align(center)[
+      #image("AAUgraphics/aau_logo_circle_en.svg", width: 25%)
     ]
   )
-  if logo != none {
-    align(right, image(logo, width: 100%))
-  }
-  v(9.6fr)
 
-  text(1.1em, date)
-
-  // Author information.
-  pad(
-    top: 0.7em,
-    right: 20%,
-    grid(
-      columns: (1fr,) * calc.min(3, authors.len()),
-      gutter: 1em,
-      ..authors.map(author => align(start)[
-        *#author.name* \
-        #author.email
-      ]),
-    ),
-  )
-
-  v(2.4fr)
   pagebreak()
 
   // Abstract page.

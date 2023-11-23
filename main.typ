@@ -14,7 +14,7 @@
   // Insert your abstract after the colon, wrapped in brackets.
   // Example: `abstract: [This is my abstract...]`
   abstract: lorem(59),
-  group_name: "cs-23-sw-1-p1-15",
+  groupname: "cs-23-sw-1-p1-15",
   date: "November 22, 2023",
   logo: none,
 )
