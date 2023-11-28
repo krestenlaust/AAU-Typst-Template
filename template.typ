@@ -20,7 +20,7 @@
 
   // Set the document's basic properties.
   set document(author: meta.participants.map(a => a.name), title: meta.title)
-  set page(numbering: "1", number-align: center)
+  set page(numbering: "I", number-align: center)
 
   set page(background: locate(loc =>
     if loc.page() == 1 {
@@ -106,6 +106,9 @@
 
 
   // Main body.
+  set page(numbering: "1", number-align: center)
+  counter(page).update(1)
+
   set par(justify: true)
 
   body
