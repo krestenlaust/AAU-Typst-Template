@@ -28,6 +28,8 @@
 // your own content!
 
 = Introduction
+Getting started with Typst shouldn't be that difficult. The language is pretty familiar to JavaScript #footnote("A programming language which is known for its incredible type system!").
+
 #lorem(60)
 
 == In this paper
