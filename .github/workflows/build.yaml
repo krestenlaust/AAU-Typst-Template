@@ -13,12 +13,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Typst
+      - name: Typst single-file compile
         uses: lvignoli/typst-action@main
         with:
           source_file: |
             main_single_file_demo.typ
-            main.typ
+      
+      - name: Typst folder compile
+        uses: yusancky/setup-typst@v2
+        id: setup-typst
+        with:
+          version: 'v0.5.0'
+      - run: typst compile main.typ
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
