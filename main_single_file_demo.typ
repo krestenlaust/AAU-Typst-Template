@@ -4,18 +4,22 @@
 // to customize this template and discover how it works.
 #show: project.with(
   meta: (
-    title: "A demonstration of the features of Typst",
-    theme: "Marvelous Theme",
-    project_period: "Fall Semester 2023",
-    project_group: "group 1",
+    title: "Explaining Quantum Mechanics to a Child, Like a Boss: Enable Understanding for Small People",
+    theme: "Scientific Theme",
+    project_period: "Fall Semester 2010",
+    project_group: "cs-23-sw-1-p1-15",
     participants: (
-      (name: "Kresten", email: "kresten@gmail.com"),
-      (name: "Laust", email: "laust@gmail.com"),
+      (name: "Kresten Mellemnavn Efternavn", email: "kresten@gmail.com"),
+      (name: "Peter Petersen", email: "mail1@mail.dk"),
+      (name: "Anders Andersen", email: "mail2@mail.dk"),
+      (name: "Lasse Lassesen", email: "mail3@mail.dk"),
+      (name: lorem(5), email: "mail4@mail.dk"),
     ),
     supervisor: (
       (name: "Anders And", email: "abc@abc.com"),
+      (name: "Mickey Mouse", email: "abc@abc.com"),
     ),
-    date: "21. December 2023",
+    date: "Christmas Eve",
   ),
   // Insert your abstract after the colon, wrapped in brackets.
   // Example: `abstract: [This is my abstract...]`
@@ -28,8 +32,6 @@
 // your own content!
 
 = Introduction
-Getting started with Typst shouldn't be that difficult. The language is pretty familiar to JavaScript #footnote("A programming language which is known for its incredible type system!").
-
 #lorem(60)
 
 == In this paper
