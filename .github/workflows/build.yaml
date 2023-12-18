@@ -13,6 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Debug
+        run: |
+          ls -R
+          cat chapters/introduction.typ
+
       - name: Typst single-file compile
         uses: lvignoli/typst-action@main
         with:
