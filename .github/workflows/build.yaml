@@ -13,23 +13,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Debug
-        run: |
-          ls -R
-          cat chapters/introduction.typ
-
-      - name: Typst single-file compile
+      - name: Compile single-file demo
         uses: lvignoli/typst-action@main
         with:
-          source_file: |
-            main_single_file_demo.typ
+          source_file: main_single_file_demo.typ
       
-      - name: Typst folder compile
-        uses: yusancky/setup-typst@v2
-        id: setup-typst
+      - name: Compile full demo
+        uses: lvignoli/typst-action@main
         with:
-          version: 'v0.5.0'
-      - run: typst compile main.typ
+          source_file: main.typ
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
