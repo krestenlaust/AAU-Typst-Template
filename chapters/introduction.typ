@@ -1,5 +1,5 @@
 = Introduction
-Getting started with Typst shouldn't be that difficult. The language is pretty similar to JavaScript #footnote("A programming language which is known for its incredible type system!").
+Getting started with Typst shouldn't be that difficult. The language is pretty similar to JavaScript #footnote([A programming language which is known for its incredible type system!]).
 
 - This is a list item
 - This is also a list item
@@ -43,6 +43,13 @@ $ mat(
   dots.v, dots.v, dots.down, dots.v;
   10, 10, ..., 10;
 ) $
+
+
+== Getting Started
+How do I start?
+
+=== Write Typst Collaboratively
+You can use [Typst.app](https://typst.app/) to write collaboratively.
 
 
 == Other Functions
