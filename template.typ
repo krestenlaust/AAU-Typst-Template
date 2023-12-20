@@ -37,14 +37,9 @@
   
   // Title page.
   page(background: image("AAUgraphics/aau_waves.svg", width: 100%, height: 100%), numbering: none,
-    grid(
-      columns: (100%),
-      rows: (50%, 20%, 30%),
-      align(center + bottom, box(
-        fill: aau-blue,
-        inset: 18pt,
-        radius: 1pt,
-        clip: false,
+    grid(columns: (100%), rows: (50%, 20%, 30%),
+      align(center + bottom,
+        box(fill: aau-blue, inset: 18pt, radius: 1pt, clip: false,
         {
           set text(fill: white, 12pt)
           align(center)[
@@ -67,14 +62,13 @@
       columns: (50%, 50%),
       rows: (30%, 70%),
       image("AAUgraphics/aau_logo_en.svg"),
-      box(width: 100%, height: 100%, {
-        align(right + horizon)[
-          *#(department)*\
-          Aalborg University\
-          http://cs.aau.dk
-        ]
-      }),
+      align(right + horizon)[
+        *#(department)*\
+        Aalborg University\
+        http://cs.aau.dk
+      ],
       box(width: 100%, height: 100%)[
+        // List all key-value pairs from 'meta' map.
         #(meta.pairs().map(data =>
         [*#(snake-to-titlecase(data.at(0))):*\ #(
           if type(data.at(1)) == array {
@@ -100,9 +94,7 @@
   pagebreak()
 
   // Table of contents.
-  page({
-    outline(depth: 3, indent: true)
-  })
+  page(outline(depth: 3, indent: true))
   
   pagebreak()
   
