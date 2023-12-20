@@ -28,4 +28,4 @@
 
 #include "Chapters/introduction.typ"
 
-#include "Chapters/related_work.typ"
+#include "Chapters/understanding_typst.typ"
