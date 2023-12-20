@@ -55,9 +55,7 @@
         }
       )),
       none,
-      align(center)[
-        #image("AAUgraphics/aau_logo_circle_en.svg", width: 25%)
-      ]
+      align(center, image("AAUgraphics/aau_logo_circle_en.svg", width: 25%))
     )
   )
     
@@ -68,9 +66,7 @@
     grid(
       columns: (50%, 50%),
       rows: (30%, 70%),
-      box(width: 100%, height: 100%, {
-        image("AAUgraphics/aau_logo_en.svg")
-      }),
+      image("AAUgraphics/aau_logo_en.svg"),
       box(width: 100%, height: 100%, {
         align(right + horizon)[
           *#(department)*\
