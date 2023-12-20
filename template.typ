@@ -29,13 +29,13 @@
   let sans-font = "New Computer Modern Sans"
 
   // Set document preferences, font family, heading format etc.
-  show link: underline
   set text(font: body-font, lang: "en")
+  set heading(numbering: "1.1")
   show math.equation: set text(weight: 400)
   show heading: set text(font: sans-font)
-  set heading(numbering: "1.1")
+  show link: underline
   
-  // Title page.
+  // Front/cover page.
   page(background: image("AAUgraphics/aau_waves.svg", width: 100%, height: 100%), numbering: none,
     grid(columns: (100%), rows: (50%, 20%, 30%),
       align(center + bottom,
