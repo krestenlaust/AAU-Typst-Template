@@ -49,8 +49,12 @@ $ mat(
 How do I start?
 
 === Write Typst Collaboratively
-You can use [Typst.app](https://typst.app/) to write collaboratively.
+You can use #link("https://typst.app/")[Typst.app] to write collaboratively. Just download #link("https://github.com/krestenlaust/AAU-Typst-Template/")[this project] as zip, and upload the following to an empty typst project:
 
+ - main.typ
+ - template.typ
+ - (folder) AAUgraphics
+ - (folder) Chapters
 
 == Other Functions
 This is the lorem ipsum function:
