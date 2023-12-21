@@ -29,22 +29,17 @@
   let sans-font = "New Computer Modern Sans"
 
   // Set document preferences, font family, heading format etc.
-  show link: underline
   set text(font: body-font, lang: "en")
+  set heading(numbering: "1.1")
   show math.equation: set text(weight: 400)
   show heading: set text(font: sans-font)
-  set heading(numbering: "1.1")
+  show link: underline
   
-  // Title page.
+  // Front/cover page.
   page(background: image("AAUgraphics/aau_waves.svg", width: 100%, height: 100%), numbering: none,
-    grid(
-      columns: (100%),
-      rows: (50%, 20%, 30%),
-      align(center + bottom, box(
-        fill: aau-blue,
-        inset: 18pt,
-        radius: 1pt,
-        clip: false,
+    grid(columns: (100%), rows: (50%, 20%, 30%),
+      align(center + bottom,
+        box(fill: aau-blue, inset: 18pt, radius: 1pt, clip: false,
         {
           set text(fill: white, 12pt)
           align(center)[
@@ -55,9 +50,7 @@
         }
       )),
       none,
-      align(center)[
-        #image("AAUgraphics/aau_logo_circle_en.svg", width: 25%)
-      ]
+      align(center, image("AAUgraphics/aau_logo_circle_en.svg", width: 25%))
     )
   )
     
@@ -68,17 +61,14 @@
     grid(
       columns: (50%, 50%),
       rows: (30%, 70%),
-      box(width: 100%, height: 100%, {
-        image("AAUgraphics/aau_logo_en.svg")
-      }),
-      box(width: 100%, height: 100%, {
-        align(right + horizon)[
-          *#(department)*\
-          Aalborg University\
-          http://cs.aau.dk
-        ]
-      }),
+      image("AAUgraphics/aau_logo_en.svg"),
+      align(right + horizon)[
+        *#(department)*\
+        Aalborg University\
+        http://cs.aau.dk
+      ],
       box(width: 100%, height: 100%)[
+        // List all key-value pairs from 'meta' map.
         #(meta.pairs().map(data =>
         [*#(snake-to-titlecase(data.at(0))):*\ #(
           if type(data.at(1)) == array {
@@ -104,9 +94,7 @@
   pagebreak()
 
   // Table of contents.
-  page({
-    outline(depth: 3, indent: true)
-  })
+  page(outline(depth: 3, indent: true))
   
   pagebreak()
   
