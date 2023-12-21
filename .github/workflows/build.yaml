@@ -13,7 +13,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Typst
+      - name: Compile single-file demo
+        uses: lvignoli/typst-action@main
+        with:
+          source_file: main_single_file_demo.typ
+      
+      - name: Compile full demo
         uses: lvignoli/typst-action@main
         with:
           source_file: main.typ
@@ -22,4 +27,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: main.pdf
+          path: |
+            main_single_file_demo.pdf
+            main.pdf
