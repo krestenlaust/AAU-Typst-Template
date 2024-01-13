@@ -28,4 +28,6 @@
 
 #include "Chapters/introduction.typ"
 
+#include "Chapters/technical_elements.typ"
+
 #include "Chapters/understanding_typst.typ"
