@@ -27,7 +27,10 @@
 // Commonly referred to as 'master' in LaTeX, and wokenly called 'main' in Typst.
 
 #include "Chapters/introduction.typ"
+#pagebreak(weak: true)
 
 #include "Chapters/technical_elements.typ"
+#pagebreak(weak: true)
 
 #include "Chapters/understanding_typst.typ"
+#pagebreak(weak: true)
