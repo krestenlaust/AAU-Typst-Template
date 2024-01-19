@@ -45,6 +45,15 @@ $ mat(
 ) $
 
 
+== Sources & bibliography
+To add a source, you just have to reference your `.bib` file like the following anywhere in a document:
+```typst
+#bibliography("sources/sample.bib")
+```
+
+In this project it's located in `main.typ`. Now it can be referred the same way a figure is referred: `@einstein` @einstein. A reference only shows up in the bibliography section if it has at least one mention.
+
+
 == Getting Started
 How do I start?
 

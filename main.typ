@@ -34,3 +34,5 @@
 
 #include "Chapters/understanding_typst.typ"
 #pagebreak(weak: true)
+
+#bibliography("sources/sample.bib")
