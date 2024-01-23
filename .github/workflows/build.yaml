@@ -13,13 +13,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Typst
+      - name: Compile singlefile-template
         uses: lvignoli/typst-action@main
         with:
-          source_file: main.typ
+          source_file: singlefile-template/main.typ
+      
+      #- name: Compile report-template
+      #  uses: lvignoli/typst-action@main
+      #  with:
+      #    source_file: report-template/main.typ
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: main.pdf
+          path: |
+            singlefile-template/main.pdf
+          #report-template/main.pdf
