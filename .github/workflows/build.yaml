@@ -28,5 +28,5 @@ jobs:
         with:
           name: PDF
           path: |
-            main_single_file_demo.pdf
-            main.pdf
+            singlefile-template/main.pdf
+          #report-template/main.pdf
