@@ -13,15 +13,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Compile single-file demo
+      - name: Compile singlefile-template
         uses: lvignoli/typst-action@main
         with:
-          source_file: main_single_file_demo.typ
+          source_file: singlefile-template/main.typ
       
-      - name: Compile full demo
+      - name: Compile report-template
         uses: lvignoli/typst-action@main
         with:
-          source_file: main.typ
+          source_file: report-template/main.typ
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
