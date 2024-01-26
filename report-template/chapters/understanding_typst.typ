@@ -4,7 +4,7 @@ Typst has two modes of text. This text right here is written directly in markup 
 rect()
 #rect()
 
-To enter markup mode in a command context/mode, use [], previously shown, this can be thought of as similar to a string in a general-purpose programming language#footnote("Typst also has a concept of strings (using double quotes \"), used primarily in functions, like this one right here.")#footnote([This could've also been written using the content mode (`[...]`). This way it's easier to markup *things* than in a string.]).
+To enter markup mode in a command context/mode, use `[...]`, previously shown, this can be thought of as similar to a string `"..."` in a general-purpose programming language#footnote("Typst infers between the concept of strings, and content mode seamlessly. String literals are primarily used in function calls, like this one right here.")#footnote([This could've also been written using the content mode `[...]`. This way it is easier to *markup* things than in a string.]).
 
 The operators can be combined to cancel each other out like so:
 #[This is exactly the same as] writing the text like this.
