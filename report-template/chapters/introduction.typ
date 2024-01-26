@@ -51,23 +51,21 @@ To add a source, you just have to reference your `.bib` file like the following 
 #bibliography("sources/sample.bib")
 ```
 
-In this project it's located in `main.typ`. Now it can be referred the same way a figure is referred: `@einstein` @einstein. A reference only shows up in the bibliography section if it has at least one mention.
+In this project it is located in `main.typ`. Once a source is included as shown above, it can be referred the same way a figure is referred: `@einstein` @einstein. A reference only shows up in the bibliography section, if it has been mentioned at least once.
 
 
 == Getting Started
-How do I start?
+You can start by modifying this template, or using the empty report template.
 
 === Write Typst Collaboratively
-You can use #link("https://typst.app/")[Typst.app] to write collaboratively. Just download #link("https://github.com/krestenlaust/AAU-Typst-Template/")[this project] as zip, and upload the following to an empty typst project:
+You can use #link("https://typst.app/")[Typst.app] to write collaboratively. Just download #link("https://github.com/krestenlaust/AAU-Typst-Template/")[this project] as zip, and upload either template to the empty typst project:
 
  - main.typ
  - template.typ
  - (folder) AAUgraphics
- - (folder) Chapters
+ - (folder) chapters
+ - (folder) sources
 
 == Other Functions
-This is the lorem ipsum function:
+This is the lorem ipsum function, it can be useful to get a sense of the layout:
 #lorem(20)
-
-=== Contributions
-#lorem(40)

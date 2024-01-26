@@ -27,7 +27,7 @@ Below is an example of how to make it a figure.
 @code:scala-snippet shows how to put a piece of code into a figure, and this text shows how to reference it.
 
 === Line numbers
-So you want line numbers as well? This isn't natively supported#footnote([This is most likely because of the KISS-principle.]), but the community has developed a couple packages to solves this.
+So you want line numbers as well? This isn't natively supported, but the community has developed a couple packages to solves this.
 
 // TODO: Write section about using line numbers.
 
