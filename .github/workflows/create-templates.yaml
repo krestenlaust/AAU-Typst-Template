@@ -13,11 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Prepare each folder
-        run: |
-          ls
-          pwd
-          #cp report-template/template.typ singlefile-template/template.typ
-          #cp report-template/template.typ report-template-empty/template.typ
+        run: ls
+        #pwd
+        #cp report-template/template.typ singlefile-template/template.typ
+        #cp report-template/template.typ report-template-empty/template.typ
 
       - name: Zip each folder
         run: |
