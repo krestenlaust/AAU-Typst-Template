@@ -15,7 +15,7 @@ jobs:
       - name: Prepare each folder
         run: |
           cd ../
-          pwd
+          ls
           cp report-template/template.typ singlefile-template/template.typ
           cp report-template/template.typ report-template-empty/template.typ
 
