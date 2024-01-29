@@ -15,10 +15,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      - name: Prepare each folder
+      - name: Copy template.typ to other templates
         run: |
-          ls
-          pwd
           cp report-template/template.typ singlefile-template/template.typ
           cp report-template/template.typ report-template-empty/template.typ
 
@@ -40,7 +38,7 @@ jobs:
           name: report-template-empty
           path: report-template-empty
 
-      - name: Zip each folder
+      - name: Zip templates for release upload
         run: |
           zip -r singlefile-template.zip singlefile-template
           zip -r report-template.zip report-template
