@@ -20,6 +20,10 @@ jobs:
           cp report-template/template.typ singlefile-template/template.typ
           cp report-template/template.typ report-template-empty/template.typ
 
+      - name: Remove READMEs from other templates
+        run: |
+          rm singlefile-template/readme.txt report-template-empty/readme.txt
+
       - name: Upload Singlefile-template
         uses: actions/upload-artifact@v2
         with:
