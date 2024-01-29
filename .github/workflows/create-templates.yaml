@@ -16,8 +16,8 @@ jobs:
         run: |
           ls
           pwd
-          cp report-template/template.typ singlefile-template/template.typ
-          cp report-template/template.typ report-template-empty/template.typ
+          #cp report-template/template.typ singlefile-template/template.typ
+          #cp report-template/template.typ report-template-empty/template.typ
 
       - name: Zip each folder
         run: |
