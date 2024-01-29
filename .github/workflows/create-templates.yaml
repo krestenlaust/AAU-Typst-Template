@@ -1,0 +1,54 @@
+name: Generate Templates
+
+on:
+  push:
+    tags:
+      - "*"
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Copy template.typ to other templates
+        run: |
+          cp report-template/template.typ singlefile-template/template.typ
+          cp report-template/template.typ report-template-empty/template.typ
+
+      - name: Upload Singlefile-template
+        uses: actions/upload-artifact@v2
+        with:
+          name: singlefile-template
+          path: singlefile-template
+
+      - name: Upload Report-template
+        uses: actions/upload-artifact@v2
+        with:
+          name: report-template
+          path: report-template
+      
+      - name: Upload Singlefile-template
+        uses: actions/upload-artifact@v2
+        with:
+          name: report-template-empty
+          path: report-template-empty
+
+      - name: Zip templates for release upload
+        run: |
+          zip -r singlefile-template.zip singlefile-template
+          zip -r report-template.zip report-template
+          zip -r report-template-empty.zip report-template-empty
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            singlefile-template.zip
+            report-template.zip
+            report-template-empty.zip
