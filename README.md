@@ -30,7 +30,7 @@ If you've just barely convinced your group to make use of Typst, then using the 
 
 Typst.app doesn't currently support dragging folders, therefore the folders should be created manually, and files dragged in accordingly. **Folder name casing is important.**
 
-## Project Structure
+## Template Structure
 This is an overview of the folders/files in the root of this repository:
 
 Each template contains the following:
