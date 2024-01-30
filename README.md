@@ -1,6 +1,9 @@
 # AAU Typst Template
 The widely used AAU LaTeX report template, rewritten in Typst
 
+## Upload to Typst.app
+![](docs/TypstUploadDemonstration.gif)
+
 ## Project Structure
 This is an overview of the folders/files in the root of this repository:
 
