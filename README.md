@@ -48,7 +48,7 @@ This file uses the graphics located in `AAUgraphics`.
 ## Inspiration
 This project replicates the (semi-official) AAU report template located at [jkjaer/aauLatexTemplates](https://github.com/jkjaer/aauLatexTemplates).
 
-If you still insist on using LaTeX, then my good friend, Tosuma, has improved the AAU LaTeX template considerately: [Tosuma/AAU-Latex-Template-English](https://github.com/Tosuma/AAU-Latex-Template-English).
+If you still insist on using LaTeX, then my good friend, [@Tosuma](https://www.github.com/Tosuma), has improved the AAU LaTeX template considerately: [Tosuma/AAU-Latex-Template-English](https://github.com/Tosuma/AAU-Latex-Template-English).
 
 ## Contribution
 Any contribution is welcome!
