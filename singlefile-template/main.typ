@@ -19,7 +19,7 @@
       (name: "Anders And", email: "abc@abc.com"),
       (name: "Mickey Mouse", email: "abc@abc.com"),
     ),
-    date: "Christmas Eve",
+    date: datetime.today().display()
   ),
   // Insert your abstract after the colon, wrapped in brackets.
   // Example: `abstract: [This is my abstract...]`
