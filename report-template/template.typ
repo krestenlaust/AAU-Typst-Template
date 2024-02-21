@@ -97,6 +97,11 @@
   page(outline(depth: 3, indent: true))
   
   pagebreak()
+
+  // Preface page.
+  page([Preface])
+
+  pagebreak()
   
   // Main body.
   set page(numbering: "1", number-align: center)
