@@ -99,7 +99,24 @@
   pagebreak()
 
   // Preface page.
-  page([Preface])
+  page({
+    text(size: 16pt)[Preface]
+    align(
+      center + bottom,
+      grid(
+        columns: (auto, auto),
+        row-gutter: 5em,
+        column-gutter: 2em,
+        ..meta.participants.map(author => {
+          align(center)[
+              #line(length: 100%)
+              #text(font: sans-font, 1.5em, author.name)\
+              #text(font: sans-font, 1em, author.email)
+          ]
+        })
+      )
+    )
+  })
 
   pagebreak()
   
