@@ -117,5 +117,11 @@
     v(6em)
   }
 
+  // Increment header for bibliography
+  show bibliography: body => {
+    counter(heading).step()
+    body
+  }
+
   body
 }
