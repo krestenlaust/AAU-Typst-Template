@@ -104,5 +104,18 @@
 
   set par(justify: true)
 
+  // Chapter Styling
+  show heading.where(level: 1): h => {
+    pagebreak(weak: true) 
+    v(1em)
+    let c = luma(70)
+    set text(fill: c, size: 80pt)
+    place(left, counter(heading).display()) 
+    set text(fill: c, size: 20pt)
+    place(right, dy: 1.6em, {h.body})
+    place(right, dy: 2.7em, {line(length: 80%, stroke: 0.7pt + c)})
+    v(6em)
+  }
+
   body
-}
+}}
