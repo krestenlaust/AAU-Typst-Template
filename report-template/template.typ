@@ -100,7 +100,7 @@
 
   // Preface page.
   page({
-    text(size: 16pt)[Preface]
+    text(16pt, weight: "extrabold")[Preface]
     align(
       center + bottom,
       grid(
@@ -110,8 +110,8 @@
         ..meta.participants.map(author => {
           align(center)[
               #line(length: 100%)
-              #text(font: sans-font, 1.5em, author.name)\
-              #text(font: sans-font, 1em, author.email)
+              #text(font: sans-font, 12pt, author.name)\
+              #text(font: sans-font, 10pt, author.email)
           ]
         })
       )
