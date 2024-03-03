@@ -9,8 +9,11 @@
     project_period: "Fall Semester 2023",
     project_group: "group 1",
     participants: (
-      (name: "Kresten", email: "kresten@gmail.com"),
-      (name: "Laust", email: "laust@gmail.com"),
+      (name: "Kresten", email: "kresten@domain.com"),
+      (name: "Laust", email: "laust@domain.com"),
+      (name: "Anders", email: "anders@domain.com"),
+      (name: "Mikkel", email: "mikkel@domain.com"),
+      (name: "Cathrine", email: "cathrine@domain.com"),
     ),
     supervisor: (
       (name: "Anders And", email: "abc@abc.com"),
