@@ -97,6 +97,28 @@
   page(outline(depth: 3, indent: true))
   
   pagebreak()
+
+  // Preface page.
+  page({
+    text(16pt, weight: "extrabold")[Preface]
+    align(
+      center + bottom,
+      grid(
+        columns: (auto, auto),
+        row-gutter: 5em,
+        column-gutter: 2em,
+        ..meta.participants.map(author => {
+          align(center)[
+              #line(length: 100%)
+              #text(font: sans-font, 12pt, author.name)\
+              #text(font: sans-font, 10pt, author.email)
+          ]
+        })
+      )
+    )
+  })
+
+  pagebreak()
   
   // Main body.
   set page(numbering: "1", number-align: center)
