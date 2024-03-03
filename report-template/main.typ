@@ -18,7 +18,7 @@
     supervisor: (
       (name: "Anders And", email: "abc@abc.com"),
     ),
-    date: "21. December 2023",
+    date: datetime.today().display()
   ),
   // Insert your abstract after the colon, wrapped in brackets.
   // Example: `abstract: [This is my abstract...]`
