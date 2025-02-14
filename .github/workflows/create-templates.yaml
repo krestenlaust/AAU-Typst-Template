@@ -25,19 +25,19 @@ jobs:
           rm singlefile-template/readme.txt report-template-empty/readme.txt
 
       - name: Upload Singlefile-template
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: singlefile-template
           path: singlefile-template
 
       - name: Upload Report-template
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: report-template
           path: report-template
       
       - name: Upload Singlefile-template
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: report-template-empty
           path: report-template-empty
