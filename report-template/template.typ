@@ -36,7 +36,7 @@
   show link: underline
   
   // Front/cover page.
-  page(background: image("AAUgraphics/aau_waves.svg", width: 100%, height: 100%), numbering: none,
+  page(background: image("graphics/template/aau_waves.svg", width: 100%, height: 100%), numbering: none,
     grid(columns: (100%), rows: (50%, 20%, 30%),
       align(center + bottom,
         box(fill: aau-blue, inset: 18pt, radius: 1pt, clip: false,
@@ -50,10 +50,10 @@
         }
       )),
       none,
-      align(center, image("AAUgraphics/aau_logo_circle_en.svg", width: 25%))
+      align(center, image("graphics/template/aau_logo_circle_en.svg", width: 25%))
     )
   )
-    
+
   pagebreak()
 
   // Abstract page.
@@ -61,7 +61,7 @@
     grid(
       columns: (50%, 50%),
       rows: (30%, 70%),
-      image("AAUgraphics/aau_logo_en.svg"),
+      image("graphics/template/aau_logo_en.svg"),
       align(right + horizon)[
         *#(department)*\
         Aalborg University\
