@@ -19,7 +19,7 @@ jobs:
           cp report-template/template.typ report-template-empty/template.typ
 
       - name: Compile singlefile-template
-        uses: lvignoli/typst-action@main
+        uses: krestenlaust/typst-action@v0.12.0
         with:
           source_file: singlefile-template/main.typ
       
