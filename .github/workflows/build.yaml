@@ -19,7 +19,7 @@ jobs:
           cp report-template/template.typ report-template-empty/template.typ
 
       - name: Compile singlefile-template
-        uses: lvignoli/typst-action@main
+        uses: krestenlaust/typst-action@v0.12.0
         with:
           source_file: singlefile-template/main.typ
       
@@ -29,9 +29,8 @@ jobs:
       #    source_file: report-template/main.typ
 
       - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: PDF
           path: |
             singlefile-template/main.pdf
-          #report-template/main.pdf
