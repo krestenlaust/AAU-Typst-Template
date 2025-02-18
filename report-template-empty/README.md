@@ -1,6 +1,6 @@
 # AAU Report Template
 
-Official Aalborg University report template, providing a clean and professional structure for academic reports.
+Unofficial Aalborg University report template, providing a clean and professional structure for academic reports.
 
 ## Features
 - Professional title page with AAU branding
