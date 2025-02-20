@@ -1,0 +1,15 @@
+[package]
+name = "aau-report"
+version = "0.1.0"
+entrypoint = "template.typ"
+authors = ["Kresten Laust <https://github.com/krestenlaust>"]
+license = "MIT" #todo
+description = "Official AAU (Aalborg University) report template"
+keywords = ["academic", "report", "thesis", "university", "aau"]
+categories = ["document", "template"]
+disciplines = ["computer science"]
+
+[template]
+path = "."
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png" #todo
