@@ -94,7 +94,7 @@
   pagebreak()
 
   // Table of contents.
-  page(outline(depth: 3, indent: true))
+  page(outline(depth: 3, indent: auto))
   
   pagebreak()
 
