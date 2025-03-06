@@ -16,7 +16,6 @@ jobs:
       - name: Copy template.typ to other templates
         run: |
           cp report-template/template.typ singlefile-template/template.typ
-          cp report-template/template.typ report-template-empty/template.typ
 
       - name: Compile singlefile-template
         uses: lvignoli/typst-action@main
