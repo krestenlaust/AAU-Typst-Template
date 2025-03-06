@@ -1,5 +1,5 @@
 [package]
-name = "AAU Student Report"
+name = "student-report-aau"
 version = "0.1.2"
 entrypoint = "template.typ"
 authors = ["Kresten Laust <https://github.com/krestenlaust>"]
