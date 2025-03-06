@@ -7,7 +7,7 @@ license = "MIT"
 description = "Official student report template at Aalborg University (AAU) recreated in Typst"
 keywords = ["academic", "report", "thesis", "university", "aau"]
 categories = ["document", "template"]
-disciplines = ["computer science"]
+disciplines = ["technical sciences", "natural sciences"]
 
 [template]
 path = "."
